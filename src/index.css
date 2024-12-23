@@ -1,0 +1,206 @@
+@font-face {
+  font-family: "CustomFont";
+  src: url("/src/assets/fonts/Inconsolata-VariableFont_wdth\,wght.ttf")
+      format("woff2"),
+    url("/src/assets/fonts/Inconsolata-VariableFont_wdth\,wght.ttf")
+      format("woff"),
+    url("/src/assets/fonts/Inconsolata-VariableFont_wdth\,wght.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "CustomFont", sans-serif;
+  color: #fff;
+  margin: 0;
+  min-height: 100vh;
+  background-image: url("./src/assets/images/background-desktop.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.container{padding: 10px; z-index: 10;}
+
+.text-gray {
+  color: #a4afb9 !important;
+}
+
+.svg-overlay {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.svg-circle1 {
+  position: fixed;
+  top: 0;
+  left: 25px;
+  z-index: 10;
+}
+
+.svg-circle2 {
+  position: fixed;
+  bottom: 50px;
+  right: 250px;
+  z-index: 10;
+}
+.svg-squiggly2 {
+  position: fixed;
+  top: 50px;
+  right: 0;
+  z-index: 10;
+}
+.svg-squiggly1 {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+.form-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  margin: 30px 0;
+}
+form {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.file-upload-area {
+  border: 1px dashed rgb(154, 154, 154);
+  background-color: #ffffff16;
+  color: #a1a1a1;
+  padding: 8px 60px;
+  border-radius: 20px;
+  text-align: center;
+  width: fit-content;
+  min-width: 400px;
+  min-height: 130px;
+}
+
+.upload-icon {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #ffffff16;
+  max-width: fit-content;
+}
+
+.upload-img img {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  border: 1px solid #a1a1a1;
+  border-radius: 10px;
+}
+.info-text {
+  color: #a1a1a1;
+
+  font-size: 12px;
+}
+.text-error {
+  color: #f57463;
+  font-size: 12px;
+}
+
+form input {
+  width: 100%;
+  background-color: #ffffff16;
+  border: 1px solid #a1a1a1;
+  border-radius: 5px;
+  color: #a1a1a1;
+  padding: 5px;
+}
+
+.submit-button {
+  width: 100%;
+  background-color: #f57463;
+  border: 0px;
+  padding: 5px 0;
+  border-radius: 5px;
+}
+
+.change-img-button {
+  background-color: #ffffff16;
+  border: none;
+  color: #a1a1a1;
+}
+
+.red-gradient {
+  background: linear-gradient(
+    90deg,
+    rgba(245, 116, 99, 1) 1%,
+    rgba(250, 183, 175, 0.8016456582633054) 50%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ticket-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ticket-svg {
+  position: relative;
+  margin-top:45px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  width: 500px;
+  height: 233px;
+  background-image: url("./assets/images/pattern-ticket.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.ticket-no{
+  font-size: 21px;
+  color: #a1a1a1;
+  position: absolute;
+  right: 0;
+  top:100px;
+  transform: rotate(90deg);
+  white-space: nowrap;
+}
+
+.ticket-date{font-size:12px; color:#a1a1a1; margin: 5px 0 0 50px;}
+.ticket-owner{display: flex;}
+.ticket-owner .user-name{text-align: start;padding: 8px 10px;}
+.ticket-owner .user-name span{display: flex; align-items: center; color:#a1a1a1}
+.notfound-img-area{margin-top:100px}
+.notfound-img-area img{max-width: 450px;}
+
+
+
+@media (max-width: 480px) {
+  .ticket-svg {
+    width: 346px;
+    height: 161px;
+    margin-top: 80px;
+    padding:15px
+  }
+  .svg-squiggly1 img{max-width: 450px;}
+  .ticket-no{top: 60px;}
+  .form-area{margin: 35px 10px;}
+  form {
+    width: -webkit-fill-available;}
+    .file-upload-area {min-width: min-content;  width: -webkit-fill-available;}
+  
+  .notfound-img-area img {
+      max-width: 390px;
+  }
+}
